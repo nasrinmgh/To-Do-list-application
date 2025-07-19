@@ -1,6 +1,7 @@
 # Simple To-Do-list-application
 My first J.S project, a minimal To-Do list to add and track daily tasks
-##demo
+## Live demo
+https://nasrinmgh.github.io/To-Do-list-application/
 
 ## Screenshots
 
@@ -17,8 +18,6 @@ My first J.S project, a minimal To-Do list to add and track daily tasks
 - CSS3
 - JavaScript (ES6)
 
-## Installation
-
 ## Future Improvements 
 ✅ Add due dates for tasks
 ⏰ Task reminder/notification
@@ -27,9 +26,6 @@ My first J.S project, a minimal To-Do list to add and track daily tasks
 
 ## 🤝 Contributing
 Contributions are welcome! Please fork the repository and submit a pull request.
-
-## 📄 License
-This project is licensed under the MIT License.
 
 ## 📬 Contact
 Made with ❤️ by Nasrin
