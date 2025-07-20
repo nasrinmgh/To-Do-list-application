@@ -1,15 +1,13 @@
-/*let savedName = localStorage.getItem(userName);
-if (!savedName) {
-    document.getElementById('nameForm').style.display = 'block';
-} else {
-    greeting(savedName);
+let userNameArray = document.querySelector('#name');
+ localStorage.getItem('savedUserName', JSON.stringify('userNameArray'));
+ console.log(`${userNameArray}`);
+
+function showName() {
+  let userName = document.getElementById('userName');
+  let showUserName = document.getElementById('name');
+  userName.value = showUserName.textContent;
+  
 }
-function greeting() {
-    let getName = document.getElementById('userName');
-    let date = new Date();
-    if (date < )
-    console.log(`Dear ${getName}`);
-}*/
 
 function toggleImage() {
     let detectiveImg = document.querySelector('.detective-wrapper');
@@ -19,7 +17,7 @@ function toggleImage() {
           detectiveImg.classList.remove('hidden');
         } else {
          detectiveImg.classList.add('hidden');
-         //list.replaceWith(detectiveImg);
+         
         }
      
       }
