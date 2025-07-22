@@ -46,6 +46,7 @@ body {
 width: 100%;
 max-width: 100%;
 height: auto;
+min-height: 100vh;
 background-size:cover;
 background-position: center;
 background: linear-gradient(to bottom, #f3f2ff, #f7f7f7);
@@ -55,14 +56,14 @@ overflow-y: scroll;
 main {
 display: flex;
 flex-direction: column;
-justify-content: center;
+justify-content: space-around;
 align-items: center;
 position: relative;
 max-width: 100%;
 /*min-height: 34rem;*/ 
-min-height: 30rem;
+min-height: 100vh;
 max-height: 100%;
-background: transparent;
+background: inherit;
 }
 
 /*    Login Form     */
@@ -144,8 +145,8 @@ background: transparent;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 35rem;
-  max-width: 100%;
+  max-width: 35rem;
+  width: 100%;
   font-family: cursive;
   font-size: medium;
   color:  #00b894;
@@ -181,39 +182,45 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-width:13rem;
-max-width: 100%;
+max-width: 35rem;
 gap: 1rem;
+margin-top: 1rem;
+
 }
 
 .heading h1 {
+  all: unset;
   font-family: cursive;
   font-size: x-large;
+  font-weight: 600;
+  margin: 0;
 }
 
 .heading i {
-font-size: 1rem;
-font-weight: 500;
+  display: flex;
+font-size: 1.8rem;
+font-weight: 600;
 color: #6c63ff;
-display: none;
+margin: 0;
 }
 
-/*.list {
-  position: relative;
-}*/
+.heading i:hover {
+  
+}
+
 .addTask {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: .5rem;
-  width: 100%;
+  max-width: 100%;
   margin-bottom: 3rem;
 }
 
 #taskInput {
   width: 30rem;
- max-width: 100%;
+  max-width: 100%;
   resize: none;
   height: 2.5rem;
   max-height: 5rem;
@@ -288,14 +295,16 @@ display: none;
 .detective-wrapper {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 1rem;
   max-height: 4rem;
+  max-width: 4rem;
   transition: opacity 0.5s ease;
   opacity: 1;
   visibility: visible;
   position: fixed;
-  z-index: -1;
+  z-index: 1;
+  margin: auto;
 }
 
 .detective-wrapper.hidden {
@@ -303,31 +312,26 @@ display: none;
   visibility: hidden;
   pointer-events: none;
   transition: .3s ease;
-  position: absolute;
   z-index: 0;
 }
 
 #detective {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  align-content: center;
-  position: fixed;
+  position: absolute;
+  z-index: inherit;
 }
 
 /* tasks*/
 ul {
- display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: baseline;
   gap: 1rem;
   max-width: 100%;
-  min-height: 3.3rem;
-  max-height: 30rem;
   margin-bottom: 1rem;
   position: relative;
+
 }
 
 .task-container {
@@ -347,7 +351,6 @@ ul {
 }
 
 .tasks {
-  margin-top: 10rem;
 }
 
 .task-container .actions-wrapper {
@@ -369,7 +372,7 @@ ul {
   overflow: hidden;
   flex-grow: 1;
  height: auto;
- width: 25rem;
+ max-width: 30rem;
 font-family: "Poppins";
  font-size: medium;
 }
@@ -409,7 +412,6 @@ font-family: "Poppins";
   margin-left: 0;
   font-family: "Poppins";
   font-size: medium;
-  width: 23rem;
 }
 
 /* confirm box to delete */
@@ -549,12 +551,61 @@ color: #f7f7f7;
 .footer-actions {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: baseline;
   height: auto;
-  margin-top: 2rem;
-  width: 35rem;
+  margin-top: 0rem;
+  width: 100%;
+  max-width: 35rem;
 }
+
+.footer-actions .toggle-mood {
+  /*display: flex;
+  justify-content: center;
+  align-items: center; */
+  position: relative;
+  bottom: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.toggle-mood:hover {
+  transition: all .3s ease;
+  transform: scale(1.1);
+  border-color: #6b63ff38;
+  box-shadow: 0 0 8px #6c63ff;
+}
+
+#darkMood {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 30px;
+  border: 1px solid #6b63ff46;
+  transition: all .3s ease;
+  background-color: #6b63ff;
+  position: absolute;
+  z-index: 1;
+}
+
+#darkMood i {
+  font-size: large;
+  color: #f3f2ff;
+  transition: all .3s ease;
+}
+
+#darkMood i:hover {
+  transition: all .3s ease;
+  transform: scale(1.1);
+  border-color: #6c63ff;
+  text-shadow: 0 0 8px #f3f2ffb1;
+} 
+
+#lightMood {
+  position: absolute;
+  z-index: 0;
+}
+
+#lightMood i
 
 /*select all btn*/
 .dropdown {
@@ -582,7 +633,7 @@ color: #f7f7f7;
 
 .dropdowntoggle {
     box-shadow: 0 0 3px #6b63ff8a;
-  transition: all .5s ease;
+    transition: all .5s ease;
     cursor: pointer;
 
 }

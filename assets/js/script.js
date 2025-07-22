@@ -17,7 +17,6 @@ function toggleImage() {
           detectiveImg.classList.remove('hidden');
         } else {
          detectiveImg.classList.add('hidden');
-         
         }
      
       }
@@ -41,6 +40,8 @@ submit.addEventListener('click', function() {
   let taskLi = document.createElement('li');
   taskLi.classList.add('task-li');
   taskLi.textContent = task.value;
+  let tasksList = document.querySelector('.tasks');
+           tasksList.prepend(taskLi);
   //To add checkbox
   let checkbox = document.createElement('span');
  checkbox.classList.add('checkbox'); 
@@ -122,7 +123,7 @@ editPen.addEventListener('click', () => {
    taskContainer.append(taskLi);
    taskContainer.append(actionsWrapper);
 
-    let tasksList = document.querySelector('.tasks');
+    //tasksList = document.querySelector('.tasks');
          tasksList.appendChild(taskContainer);
          toggleImage();
            task.value = '';
