@@ -1,13 +1,6 @@
-let userNameArray = document.querySelector('#name');
- localStorage.getItem('savedUserName', JSON.stringify('userNameArray'));
- console.log(`${userNameArray}`);
-
-function showName() {
-  let userName = document.getElementById('userName');
-  let showUserName = document.getElementById('name');
-  userName.value = showUserName.textContent;
-  
-}
+window.addEventListener('DOMContentLoaded', () => {
+  let userName = localStorage.getItem()
+})
 
 function toggleImage() {
     let detectiveImg = document.querySelector('.detective-wrapper');
@@ -139,8 +132,14 @@ editPen.addEventListener('click', () => {
 
 
    }
+  //        Main add task function ends       //
 
-                //        Main add task function ends       //
+  //     FOOTER      //
+  // Toggle Mood//
+  let darkMood = document.getElementById('darkMood');
+  darkMood.addEventListener('click', () => {
+   document.body.classList.toggle('dark-mood');
+  })
    
 
     
