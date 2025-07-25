@@ -1,7 +1,8 @@
+/*
 window.addEventListener('DOMContentLoaded', () => {
     let userName = localStorage.getItem("username")
 })
-
+*/
 function toggleImage() {
     let detectiveImg = document.querySelector('.detective-wrapper');
     let list = document.querySelectorAll('.task-container');
@@ -135,19 +136,35 @@ function addTask() {
 //        Main add task function ends       //
 
 
-//     FOOTER      //
-// Toggle Mood//
+//     Toggle Mood  //
+
+  function toggleMood() {
 let darkMood = document.getElementById('darkMood');
-darkMood.addEventListener('click', () => {
+let lightMood = document.getElementById('lightMood');
+
+    lightMood.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mood');
+      lightMood.style.display = 'none';
+      darkMood.style.display = 'flex';
+    })darkMood.addEventListener('click', () => {
     document.body.classList.toggle('dark-mood');
-})
-   
+darkMood.style.display = 'none';
+      lightMood.style.display = 'flex';
+    })
+  }
 
-    
-  
+ toggleMood();
+
+// Toggle actions //
+function showToggleMenu() {
+  let toggleBtn = document.querySelector('.dropdowntoggle');
+  toggleBtn.addEventListener('click', () => {
+  let dropdownMenu = document.querySelector('.dropdown-menu');
+  dropdownMenu.style.display = 'flex';
+  })
+}
 
 
-    
 
 
 
