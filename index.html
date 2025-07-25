@@ -1,101 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do List</title>
-  <link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/all.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<!-- FONTS LINKS-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- FONTS LINKS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
 </head>
 
 <body>
-  <main>
-    
+<main>
+
     <!-- Login form-->
-  <div class="login-container" style="display: none;">
-    <h2>Login to your To-Do App</h2>
-    <form action="" id="loginForm" style="display: flex;">
-      <input type="text" id="userName" name="username" placeholder="Enter your name">
-      <input type="password" id="userPass" name="password" placeholder="Enter a valid password">
-      <button type="submit">Login</button>
-    </form>
-  </div>
+    <div class="login-container" style="display: none;">
+        <h2>Login to your To-Do App</h2>
+        <form action="" id="loginForm" style="display: flex;">
+            <input type="text" id="userName" name="username" placeholder="Enter your name"/>
+            <input type="password" id="userPass" name="password" placeholder="Enter a valid password"/>
+            <button type="submit">Login</button>
+        </form>
+    </div>
 
     <!--   Header   -->
-  <div class="header">
-    <div class="greeting">
-    <div id="hello">Hello,</div>
-     <div id="name"></div>
-     </div>
+    <div class="header">
+        <div class="greeting">
+            <div id="hello">Hello,</div>
+            <div id="name"></div>
+        </div>
 
-     <div class="date-container">
-      <div id="dateTitle">Date:</div>
-      <div id="date">7/7</div>
-     </div>
-  </div>
+        <div class="date-container">
+            <div id="dateTitle">Date:</div>
+            <div id="date">7/7</div>
+        </div>
+    </div>
 
-    
+
     <!-- Heading -->
-<div class="heading">
-  <h1>To Do List</h1><i class="fa-duotone fa-solid fa-notebook"></i>
-</div>
-
-<!--  Task input   -->
-<div class="addTask">
-  <textarea type="text" name="" id="taskInput" placeholder="Add new task"></textarea>
-    <button id="addBtn"><i class="fa-solid fa-plus"></i></button>
-</div>
-
-   <!-- confirm box to delete-->
-<div class="confirm-wrapper" style="display: none;">
-  <div class="delConfirm">
-      <p>Are you sure to delete task?
-      </p>
-      <div class="del-confirm-btns">
-        <button id="delBtn">Delete</button>
-        <button id="cancelBtn">Cancel</button>
-      </div>
-  </div>
-</div> 
-
-     <!-- Tasks List/ section -->
-<section class="list">
-
-    <!-- Detective image display-->
-     <div class="detective-wrapper">
-       <img src="assets/images/detective.png" alt="Searching for tasks" id="detective">
+    <div class="heading">
+        <h1>To Do List</h1><i class="fa-duotone fa-solid fa-notebook"></i>
     </div>
 
-    <!-- tasks list -->
-  <ul class="tasks">
-    
-  </ul>
-</section>
-  <!-- Footer  -->
-  <section class="footer-actions">
-    
-    <div class="toggle-mood">
-      <div id="darkMood"><i class="fa-regular fa-moon"></i></div>
-      <div id="lightMood"><i class="fa-regular fa-sun-bright" style="display: block;"></i></div>
+    <!--  Task input   -->
+    <div class="addTask">
+        <textarea type="text" name="" id="taskInput" placeholder="Add new task"></textarea>
+        <button id="addBtn"><i class="fa-solid fa-plus"></i></button>
     </div>
 
-  <div class="dropdown">
-    <div class="dropdowntoggle">ALL <i class="fa-solid fa-circle-arrow-down"></i></div>
-      <div class="dropdown-menu" style="display: none;">
-        <div class="option">Delete</div>
-        <div class="option">Complete</div>
-      </div>
-  </div>
-</section>
+    <!-- confirm box to delete-->
+    <div class="confirm-wrapper" style="display: none;">
+        <div class="delConfirm">
+            <p>Are you sure to delete task?
+            </p>
+            <div class="del-confirm-btns">
+                <button id="delBtn">Delete</button>
+                <button id="cancelBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tasks List/ section -->
+    <section class="list">
+
+        <!-- Detective image display-->
+        <div class="detective-wrapper">
+            <img src="assets/images/detective.png" alt="Searching for tasks" id="detective">
+        </div>
+
+        <!-- tasks list -->
+        <ul class="tasks">
+
+        </ul>
+    </section>
+    <!-- Footer  -->
+    <section class="footer-actions">
+
+        <div class="toggle-mood">
+            <div id="darkMood"><i class="fa-regular fa-moon"></i></div>
+            <div id="lightMood"><i class="fa-regular fa-sun-bright" style="display: block;"></i></div>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdowntoggle">ALL <i class="fa-solid fa-circle-arrow-down"></i></div>
+            <div class="dropdown-menu" style="display: none;">
+                <div class="option">Delete</div>
+                <div class="option">Complete</div>
+            </div>
+        </div>
+    </section>
 
 
 </main>
-<script src="/Portfolio/javascript.projects/planner/assets/js/script.js"></script>
+<script src="./assets/js/script.js"></script>
 </body>
 </html>
