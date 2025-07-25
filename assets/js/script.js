@@ -138,30 +138,31 @@ function addTask() {
 
 //     Toggle Mood  //
 
-  function toggleMood() {
-let darkMood = document.getElementById('darkMood');
-let lightMood = document.getElementById('lightMood');
+function toggleMood() {
+    let darkMood = document.getElementById('darkMood');
+    let lightMood = document.getElementById('lightMood');
 
     lightMood.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mood');
-      lightMood.style.display = 'none';
-      darkMood.style.display = 'flex';
-    })darkMood.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mood');
-darkMood.style.display = 'none';
-      lightMood.style.display = 'flex';
+        document.body.classList.toggle('dark-mood');
+        lightMood.style.display = 'none';
+        darkMood.style.display = 'flex';
     })
-  }
+    darkMood.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mood');
+        darkMood.style.display = 'none';
+        lightMood.style.display = 'flex';
+    })
+}
 
- toggleMood();
+toggleMood();
 
 // Toggle actions //
 function showToggleMenu() {
-  let toggleBtn = document.querySelector('.dropdowntoggle');
-  toggleBtn.addEventListener('click', () => {
-  let dropdownMenu = document.querySelector('.dropdown-menu');
-  dropdownMenu.style.display = 'flex';
-  })
+    let toggleBtn = document.querySelector('.dropdowntoggle');
+    toggleBtn.addEventListener('click', () => {
+        let dropdownMenu = document.querySelector('.dropdown-menu');
+        dropdownMenu.style.display = 'flex';
+    })
 }
 
 
