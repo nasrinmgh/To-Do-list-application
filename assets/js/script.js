@@ -75,7 +75,7 @@ function addTask() {
         saveEdit.addEventListener('click', () => {
             taskLi.prepend(currentInput);
             saveTasks();
-
+            
         })
     }
 
@@ -109,7 +109,8 @@ function addTask() {
     editPen.innerHTML = '<i class="fa-regular fa-pen-nib edit-pen"></i>';
     editPen.addEventListener('click', () => {
         editTask(taskContainer);
-        editPen.remove();
+        editPen.replaceWith(saveEdit);
+        checkbox.append(editInput);
     })
 
     // For CSS style
@@ -148,12 +149,23 @@ function toggleMood() {
     const lightMood = document.getElementById('lightMood');
     const darkImage = document.getElementById('darkDetective');
     const lightImage = document.getElementById('detective');
+
+    const darkMode = localStorage.getItem('darkMode') === 'true';
+    if (darkMode) {
+        document.body.classList.add('dark-mood');
+        lightMood.style.display = 'flex';
+        darkMood.style.display = 'none';
+        lightImage.style.display = 'none';
+        darkImage.style.display = 'block';
+    }
+
     darkMood.addEventListener('click', () => {
         document.body.classList.toggle('dark-mood');
         lightMood.style.display = 'flex';
         darkMood.style.display = 'none';
         lightImage.style.display = 'none';
         darkImage.style.display = 'block';
+         localStorage.setItem('darkMode', true);
     })
     lightMood.addEventListener('click', () => {
         document.body.classList.toggle('dark-mood');
@@ -161,6 +173,8 @@ function toggleMood() {
         lightMood.style.display = 'none';
         lightImage.style.display = 'block';
         darkImage.style.display = 'none';
+        darkImage.style.display = 'none';
+        localStorage.setItem('darkMode', false);
     })
 }
 
